@@ -5,7 +5,7 @@ import { createBuyOrder } from "../../services/firestore";
 
 function CheckoutForm() {
   const context = useContext(cartCtx);
-  const { cart, getTotalPriceInCart, getItemPrice } = context;
+  const { cart, getTotalPriceInCart, getItemPrice, clearCheckout } = context;
   const navigate = useNavigate();
   const [dataForm, setDataForm] = useState({
     name: "",
@@ -23,6 +23,7 @@ function CheckoutForm() {
     };
     createBuyOrder(orderData).then((orderid) => {
       navigate(`/checkout/${orderid}`);
+      clearCheckout()
     });
   }
 

@@ -78,6 +78,11 @@ export default function CartContextProvider({ children }) {
     })
   };
 
+  const clearCheckout = () => {
+    setCart([]) 
+  }
+
+
   const getItemPrice = () => {
     let totalPrice = 0;
     totalPrice =
@@ -92,6 +97,7 @@ export default function CartContextProvider({ children }) {
         addItem,
         getTotalItemsInCart,
         clear,
+        clearCheckout,
         isInCart,
         deleteItem,
         getItemPrice,

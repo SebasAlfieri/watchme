@@ -7,6 +7,10 @@
 
 <h4 align="center">Demostrando mis capacidades con un simple proyecto E-Comerce construida en <a href="https://es.reactjs.org/" target="_blank">React</a>.</h4>
 
+## Deploy
+
+<a href="https://watchmealfieri.vercel.app/">WatchMe Deploy</a>
+
 
 ## Características
 
@@ -41,7 +45,7 @@ $ npm start
 
 ## Contacto
 
-LinkedIn: <a href="https://www.linkedin.com/in/sebastian-alfieri-43b22121b/">
+<a href="https://www.linkedin.com/in/sebastian-alfieri-43b22121b/">LinkedIn</a>
 Email: sebasalfieri@gmail.com
 
 ## Herramientas utilizadas
