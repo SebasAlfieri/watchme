@@ -1,0 +1,61 @@
+.mainContainer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 5vh;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  transition: 1s;
+}
+
+.itemTop{
+  display: flex;
+  width: 90%;
+  box-shadow: 5px 2px 3px black;
+  background: #292929;
+  background: linear-gradient(90deg, rgba(41,41,41,1) 43%, rgba(230,30,38,1) 100%);
+}
+
+.titleTop{
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+
+h4{
+  font-size: 1.5rem;
+  width: 80%;
+  font-weight: 100;
+  font-style: italic;
+}
+
+h3{
+  color: #b12025;
+}
+
+.imgTop{
+  display: flex;
+  width: 60%;
+  height: 100%;
+
+}
+
+.imgTop img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;  
+}
+
+.link{
+  margin-top: 10vh;
+  color: #b12025;
+  transition: 0.2s;
+}
+
+.link:hover{
+  transform: scale(1.1);
+}
