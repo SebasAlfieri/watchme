@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { cartCtx } from "../../context/cartContext";
 import { createBuyOrder, showOrder } from "../../services/firestore";
+import "./CheckoutForm.css"
 
 function CheckoutForm() {
   const context = useContext(cartCtx);
@@ -38,9 +39,9 @@ function CheckoutForm() {
 
   return (
     <div className="form-container">
-      <form onSubmit={handleCheckout}>
+      <form className="form" onSubmit={handleCheckout}>
         <div className="form-item">
-          <label htmlFor="name">Nombre</label>
+          <label htmlFor="name"></label>
           <input
             value={dataForm.name}
             onChange={inputChangeHandler}
@@ -51,7 +52,7 @@ function CheckoutForm() {
           />
         </div>
         <div className="form-item">
-          <label htmlFor="telefono">Telefono</label>
+          <label htmlFor="telefono"></label>
           <input
             value={dataForm.phone}
             onChange={inputChangeHandler}
@@ -62,7 +63,7 @@ function CheckoutForm() {
           />
         </div>
         <div className="form-item">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email"></label>
           <input
             value={dataForm.email}
             onChange={inputChangeHandler}
