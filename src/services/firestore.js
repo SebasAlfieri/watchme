@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, doc, getDoc, query, where, addDoc } from "firebase/firestore"
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyCGCBcLiNzFnHz6JqnM4JmKmjF3sOYCqAk",
   authDomain: "react-aac35.firebaseapp.com",
@@ -69,6 +68,7 @@ export async function createBuyOrder(orderData){
   const collectionRef = collection(firestore, "orders")
   let respuesta = await addDoc(collectionRef, orderData)
   alert(`Your order registry code is: ${respuesta.id}`)
+  
   return respuesta.id
 }
 
