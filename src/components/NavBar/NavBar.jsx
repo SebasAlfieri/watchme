@@ -9,7 +9,6 @@ function NavBar(){
   const navigate = useNavigate();
   const context = useContext(userContext);
   const { logout } = useContext(userContext);
-  console.log(context)
 
   function logoutNavigate(){
     logout()

@@ -13,7 +13,6 @@ function Login() {
   function loginUser(evt){
     evt.preventDefault();
     let inputUsername = evt.target.elements[0].value;
-    console.log(evt.target.elements[0].value)
     authUser(inputUsername)
     navigate(`/inicio`)
   }
