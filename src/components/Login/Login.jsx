@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { userContext } from "../../context/userContext"
 import "./login.css"
 import LoginInputText from "./LoginInputText"
@@ -16,6 +16,10 @@ function Login() {
     authUser(inputUsername)
     navigate(`/inicio`)
   }
+
+  useEffect(() => {
+    document.title = `Welcome`;
+  }, []);
 
   return (
     <div className='loginContainer'>
