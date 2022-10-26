@@ -17,14 +17,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   return (
     <CartContextProvider>
+    <UserContextProvider>
       <BrowserRouter>
         <NavBar/>
         <div className='separador'></div>
         <Routes>
           <Route path="/" element={
-              <UserContextProvider>
-                <Login/>
-              </UserContextProvider>
+              <Login/>
             }/>
           <Route path="/inicio" element={
             <div>
@@ -50,6 +49,7 @@ function App() {
         </Routes>
         <Footer/>
       </BrowserRouter>
+    </UserContextProvider>
     </CartContextProvider>
   );
 }

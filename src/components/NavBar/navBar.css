@@ -97,3 +97,23 @@
   color: #df5c61;
 }
 
+.logout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5vw;
+  height: 40%;
+  border: 1px solid white;
+  padding: 5px;
+  background-color: #252525;
+  color: white;
+  margin-left: 20px;
+}
+
+.logout:hover {
+  background-color: #424242;
+}
+
+.logout:active {
+  background-color: #b12025;
+}

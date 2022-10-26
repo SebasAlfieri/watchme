@@ -3,9 +3,11 @@ import { userContext } from "../../context/userContext"
 import "./login.css"
 import LoginInputText from "./LoginInputText"
 import LoginInputPass from "./LoginInputPass"
+import { useNavigate } from "react-router-dom";
 
 function Login() {
-  const {username} = useContext(userContext);
+  const navigate = useNavigate();
+  const { username } = useContext(userContext);
   const { authUser } = useContext(userContext)
 
   function loginUser(evt){
@@ -13,6 +15,7 @@ function Login() {
     let inputUsername = evt.target.elements[0].value;
     console.log(evt.target.elements[0].value)
     authUser(inputUsername)
+    navigate(`/inicio`)
   }
 
   return (
@@ -20,7 +23,7 @@ function Login() {
       <div className="login">
         <div className="loginInputsContainer">
           <div className="inputsLogo">
-            <h2>Watch.Me {username}</h2>
+            <h2>Watch.Me</h2>
           </div>
           <form onSubmit={loginUser} action="" className="inputsContainer">
             <LoginInputText text="Username"/>
