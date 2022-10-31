@@ -18,8 +18,7 @@ function ItemTopContainer() {
         setError(errormsg.message);
       })
       .finally(() => setIsLoading(false));
-  }, []);
-
+  }, [id]);
 
   useEffect(() => {
     document.title = `Movie details`;

@@ -59,9 +59,7 @@ function Checkout() {
       <h3>Total: {data.total}</h3>
       <div>
 
-
       {data.items.map((items) => {
-        console.log(items.actors)
         return(
           <CheckoutItem
           actors={items.actors}
@@ -70,16 +68,10 @@ function Checkout() {
           title={items.title}
           price={items.price}
           />
-
-
         )
         
       })}
       </div>
-      
-
-
-
       </div>
     </div>
   );

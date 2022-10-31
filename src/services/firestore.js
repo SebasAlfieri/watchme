@@ -13,66 +13,82 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
 
-export async function getItems(){
+export async function getItems() {
   const collectionRef = collection(firestore, "watchme")
   let respuesta = await getDocs(collectionRef)
 
-  let dataDocs = respuesta.docs.map( (documento) => {
+  let dataDocs = respuesta.docs.map((documento) => {
     let docFormateado = { ...documento.data(), id: documento.id }
     return docFormateado
   });
   return dataDocs
 }
 
-export async function getSingleItem(idParams){
+export async function getSingleItem(idParams) {
   const docRef = doc(firestore, "watchme", idParams)
   const docSnapshot = await getDoc(docRef);
-  console.log(docSnapshot.id)
+
   return { ...docSnapshot.data(), id: docSnapshot.id }
 }
 
-// export async function getSingleItemTop(idParams){
-//   const docRef = doc(firestore, "watchme", idParams)
-//   const docSnapshot = await getDoc(docRef);
-//   var x = Math.floor(Math.random() * 16);
-
-//   return { ...docSnapshot.data(), id: docSnapshot.id }
-// }
-
-export async function getSingleItemTop(){
-  const collectionRef = collection(firestore, "watchme")
-  let respuesta = await getDocs(collectionRef)
-  var x = Math.floor(Math.random() * 16);
-
-  return respuesta.docs[x].data()
-}
-
-
-export async function getItemsByCategory(catParams){
+export async function getItemsByCategory(catParams) {
   const collectionRef = collection(firestore, "watchme");
   const queryCategory = query(
     collectionRef,
     where("genre", "==", catParams)
-    );
+  );
 
   const respuesta = await getDocs(queryCategory)
 
-  let dataDocs = respuesta.docs.map( (documento) => {
+  let dataDocs = respuesta.docs.map((documento) => {
     let docFormateado = { ...documento.data(), id: documento.id }
     return docFormateado
   });
   return dataDocs
 }
 
-export async function createBuyOrder(orderData){
+export async function createBuyOrder(orderData) {
   const collectionRef = collection(firestore, "orders")
   let respuesta = await addDoc(collectionRef, orderData)
   alert(`Your order registry code is: ${respuesta.id}`)
-  
+
   return respuesta.id
 }
 
-export async function getSingleItemCheckout(idParams){
+export async function getSingleItemTop() {
+  let x = Math.floor(Math.random() * 7);
+  let id = x
+
+  if (x == 0) {
+    id = "5xZGWQDp1PBAMmX2x69Y"
+  }
+  else if (x == 1) {
+    id = "F0TztZIqUrCz02G7jMSn"
+  }
+  else if (x == 2) {
+    id = "HYKxKuHGt4zvPD3Ala9n"
+  }
+  else if (x == 3) {
+    id = "HsyGkRViNZItJeYXSPUm"
+  }
+  else if (x == 4) {
+    id = "JZWk7s8EIirXemdF0Yk5"
+  }
+  else if (x == 5) {
+    id = "KLCHUSrgX8kW7HdoowmR"
+  }
+  else if (x == 6) {
+    id = "O2zIXQUbmLSIeQUJUmDG"
+  }
+
+  const docRef = doc(firestore, "watchme", id);
+  const docSnap = await getDoc(docRef);
+
+  return { ...docSnap.data(), id: docSnap.id }
+}
+
+
+export async function getSingleItemCheckout(idParams) {
   const docRef = doc(firestore, "orders", idParams)
   const docSnapshot = await getDoc(docRef);
 
@@ -80,7 +96,7 @@ export async function getSingleItemCheckout(idParams){
 }
 
 
-export async function exportDataToFirestore(){
+export async function exportDataToFirestore() {
   const data = [
     {
       id: "1",
@@ -204,7 +220,7 @@ export async function exportDataToFirestore(){
       imdbid: "tt0848228",
       Type: "movie",
       Response: "True",
-       Images: [
+      Images: [
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTA0NjY0NzE4OTReQTJeQWpwZ15BbWU3MDczODg2Nzc@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE1MzEzMjcyM15BMl5BanBnXkFtZTcwNDM4ODY3Nw@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMwMzM2MTg1M15BMl5BanBnXkFtZTcwNjM4ODY3Nw@@._V1_SX1777_CR0,0,1777,999_AL_.jpg",
@@ -406,7 +422,7 @@ export async function exportDataToFirestore(){
       Type: "series",
       "totalSeasons": "3",
       Response: "True",
-       Images: [
+      Images: [
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2ODg0MzMzM15BMl5BanBnXkFtZTgwODYxODA5NTE@._V1_SY1000_SX1500_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTcyMjA0MzczNV5BMl5BanBnXkFtZTgwNTIyODA5NTE@._V1_SY1000_SX1500_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk0MTI0NzQ2NV5BMl5BanBnXkFtZTgwMDkxODA5NTE@._V1_SY1000_SX1500_AL_.jpg",
@@ -440,7 +456,7 @@ export async function exportDataToFirestore(){
       Type: "series",
       "totalSeasons": "2",
       Response: "True",
-       Images: [
+      Images: [
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk2MDMzMTc0MF5BMl5BanBnXkFtZTgwMTAyMzA1OTE@._V1_SX1500_CR0,0,1500,999_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIxMDkyOTEyNV5BMl5BanBnXkFtZTgwNjY3Mjc3OTE@._V1_SY1000_SX1500_AL_.jpg",
         "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA2NDUwMTU2NV5BMl5BanBnXkFtZTgwNTI1Mzc3OTE@._V1_SY1000_CR0,0,1499,1000_AL_.jpg",
@@ -613,10 +629,10 @@ export async function exportDataToFirestore(){
       ]
     }
   ];
-   const collectionRef = collection(firestore, "watchme");
-   for (let item of data){
+  const collectionRef = collection(firestore, "watchme");
+  for (let item of data) {
     const newDoc = await addDoc(collectionRef, item);
-   }
+  }
 }
 
 export default firestore
