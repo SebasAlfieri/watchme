@@ -50,7 +50,6 @@ export async function getItemsByCategory(catParams) {
 export async function createBuyOrder(orderData) {
   const collectionRef = collection(firestore, "orders")
   let respuesta = await addDoc(collectionRef, orderData)
-  alert(`Your order registry code is: ${respuesta.id}`)
 
   return respuesta.id
 }

@@ -62,6 +62,7 @@
 
 #cartIcon{
   display: flex;
+  color: white;
   width: 15%;
   justify-self: center;
   height: 100%;
