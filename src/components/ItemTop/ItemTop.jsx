@@ -10,8 +10,8 @@ function ItemTop(props) {
     <div className="itemTop">
       <div className="titleTop">
         <h1>{props.title}</h1>
-        <h4>{props.bio}</h4>
-        <h3>Recomendation</h3>
+        <h4 className="h4Top">{props.bio}</h4>
+        <h3 className="h3Top">Recomendation</h3>
         {/* Santi acá queria hacer un boton que linkee
         con el detalle del item por ID de firebase
         pero no estoy pudiendo linkear el id :/
