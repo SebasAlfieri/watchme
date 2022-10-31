@@ -14,13 +14,12 @@
   margin: auto;
   display: flex;
   width: 50%;
-  background-color: white;
+  background-color: whitesmoke;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 50px;
 }
-
 
 .CheckoutTop h1,
 .CheckoutTop h2{
@@ -43,4 +42,21 @@
 .cartViewContainersCheckout{
   width: 80%;
   color: white;
+}
+
+.CheckoutBackButton{
+  font-family: bebas neue;
+  letter-spacing: 2px;
+  width: 40%;
+  font-size: 1.5rem;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  background-color: #282828;
+  border: 5px solid #b12025;
+  text-decoration: none;
+}
+
+.CheckoutBackButton:hover{
+  background-color: #505050;
 }

@@ -86,14 +86,12 @@ export async function getSingleItemTop() {
   return { ...docSnap.data(), id: docSnap.id }
 }
 
-
 export async function getSingleItemCheckout(idParams) {
   const docRef = doc(firestore, "orders", idParams)
   const docSnapshot = await getDoc(docRef);
 
   return { ...docSnapshot.data(), id: docSnapshot.id }
 }
-
 
 export async function exportDataToFirestore() {
   const data = [

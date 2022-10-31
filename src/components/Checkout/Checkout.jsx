@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { getSingleItemCheckout } from "../../services/firestore";
 import CheckoutItem from "./CheckoutItem";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { DotSpinner } from "@uiball/loaders";
 import "./Checkout.css";
+
 
 function Checkout() {
   const [data, setData] = useState({});
@@ -69,7 +70,11 @@ function Checkout() {
             />
           );
         })}
+        <Link className="CheckoutBackButton" to="/inicio">
+            <h3>Back to browse</h3>
+        </Link>
       </div>
+
     </div>
   );
 }

@@ -23,7 +23,7 @@ function NavBar(){
         </Link>
         <ul>
           <li>
-            <Link to="/inicio">Inicio</Link>
+            <Link to="/inicio">Browse</Link>
           </li>
           <li>
             <Link to="/Category/Action">Action</Link>
