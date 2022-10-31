@@ -15,11 +15,16 @@ function CheckoutForm() {
   });
 
   function handleCheckout(event) {
+    function dateString(){
+      const d = new Date();
+      let text = d.toString();
+      return text
+    }
     event.preventDefault();
     const orderData = {
       buyer: dataForm,
       items: cart,
-      date: new Date(),
+      date: dateString(),
       total: getTotalPriceInCart(),
     };
     createBuyOrder(orderData).then((orderid) => {

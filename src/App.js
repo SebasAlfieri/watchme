@@ -43,7 +43,7 @@ function App() {
           <Route path="/cart" element={
             <CartView/>
           }/>
-          <Route path='/checkout/:orderid' element={
+          <Route path="/checkout/:id" element={
             <Checkout/>
           }/>
         </Routes>

@@ -27,7 +27,7 @@ export async function getItems(){
 export async function getSingleItem(idParams){
   const docRef = doc(firestore, "watchme", idParams)
   const docSnapshot = await getDoc(docRef);
-
+  console.log(docSnapshot.id)
   return { ...docSnapshot.data(), id: docSnapshot.id }
 }
 
@@ -71,6 +71,14 @@ export async function createBuyOrder(orderData){
   
   return respuesta.id
 }
+
+export async function getSingleItemCheckout(idParams){
+  const docRef = doc(firestore, "orders", idParams)
+  const docSnapshot = await getDoc(docRef);
+
+  return { ...docSnapshot.data(), id: docSnapshot.id }
+}
+
 
 export async function exportDataToFirestore(){
   const data = [
