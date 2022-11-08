@@ -51,6 +51,7 @@ Email: sebasalfieri@gmail.com
 ## Herramientas utilizadas
 
 - [React](https://es.reactjs.org/)
+- [Firebase](https://firebase.google.com/?hl=es)
 - [UIBall](https://uiball.com/loaders/)
 - [React Icons](https://react-icons.github.io/react-icons/)
 - [SweeAlert2](https://sweetalert2.github.io/)
