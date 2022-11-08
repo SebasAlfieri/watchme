@@ -74,7 +74,6 @@ function Checkout() {
             <h3>Back to browse</h3>
         </Link>
       </div>
-
     </div>
   );
 }

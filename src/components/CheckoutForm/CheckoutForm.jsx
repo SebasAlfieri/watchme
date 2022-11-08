@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { cartCtx } from "../../context/cartContext";
-import { createBuyOrder, showOrder } from "../../services/firestore";
+import { createBuyOrder } from "../../services/firestore";
 import "./CheckoutForm.css"
 
 function CheckoutForm() {
