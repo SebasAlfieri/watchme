@@ -5,7 +5,8 @@
   margin-top: 5vh;
   border: 1px solid black;
   width: 100%;
-  background-color: #292929
+  background-color: #292929;
+  padding-top: 30px;
 }
 
 .productsTitle{

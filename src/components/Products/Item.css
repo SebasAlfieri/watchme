@@ -216,16 +216,13 @@
     height: 240px;
     font-size: 1rem;
   }
-
-  }
-
+}
 
 @media (min-width: 1440px) {
 
   .cardTextTitle{
     font-size: 2rem;
   }
-  
 
   .cardContainer{
     width: 400px;

@@ -221,8 +221,12 @@
   .title{
     font-size: 2rem;
   }
+
+  .bio{
+    font-size: 1.5rem;
+  }
   
   .info{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 }
