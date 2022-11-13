@@ -1,10 +1,11 @@
 .CheckoutMainContainer{
-  margin-top: 10vh;
   margin-bottom: 10vh;
   width: 100%;
+  height: fit-content;
   display: flex;
   justify-items: center;
   align-items: center;
+  font-size: 0.7rem;
 }
 
 .CheckoutContainer{
@@ -13,12 +14,12 @@
   color: black;
   margin: auto;
   display: flex;
-  width: 50%;
+  width: 80%;
   background-color: whitesmoke;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+  padding: 20px;
 }
 
 .CheckoutTop h1,
@@ -47,7 +48,7 @@
 .CheckoutBackButton{
   font-family: bebas neue;
   letter-spacing: 2px;
-  width: 40%;
+  width: 90%;
   font-size: 1.5rem;
   padding: 10px;
   text-align: center;
@@ -59,4 +60,59 @@
 
 .CheckoutBackButton:hover{
   background-color: #505050;
+}
+
+
+@media (min-width: 768px) {
+
+  .CheckoutMainContainer{
+    font-size: 1rem;
+    width: 50%;
+    margin: 5vh auto;
+  }
+  
+  .CheckoutContainer{
+    padding: 50px;
+  }
+  
+  .CheckoutTop h1,
+  .CheckoutTop h2{
+    text-align: center;
+  }
+  
+  .CheckoutTop span{
+    color: #b12025;
+  }
+  
+  .CheckoutTop h2{
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  
+  .CheckoutTop h3{
+    margin-bottom: 5%;
+  }
+  
+  .cartViewContainersCheckout{
+    width: 80%;
+    color: white;
+  }
+  
+  .CheckoutBackButton{
+    font-family: bebas neue;
+    letter-spacing: 2px;
+    width: 40%;
+    font-size: 1.5rem;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: #282828;
+    border: 5px solid #b12025;
+    text-decoration: none;
+  }
+  
+  .CheckoutBackButton:hover{
+    background-color: #505050;
+  }
+
 }
