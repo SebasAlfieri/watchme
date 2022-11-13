@@ -188,9 +188,55 @@
     width: 80%;
     height: 80%;
   }
+}
 
+
+@media (min-width: 1024px) {
+
+  .cardTextTop{
+    height: 30%;
+  }
+
+  .cardTextTitle{
+    font-size: 1.7rem;
+  }
+
+  .cardTextBottom{
+    height: 70%;
+  }
+
+  .cardContainer{
+    width: 340px;
+    height: 240px;
+    margin: 25px;
+  }
+
+  .cardTextContainer{
+    width: 340px;
+    height: 240px;
+    font-size: 1rem;
+  }
+
+  }
+
+
+@media (min-width: 1440px) {
+
+  .cardTextTitle{
+    font-size: 2rem;
+  }
   
 
-  
+  .cardContainer{
+    width: 400px;
+    height: 300px;
+    margin: 25px;
+  }
+
+  .cardTextContainer{
+    width: 400px;
+    height: 300px;
+    font-size: 1.5rem;
+  }
 
 }

@@ -64,6 +64,7 @@
   font-size: 1rem;
   font-weight: 200;
   font-family: 'Roboto', sans-serif;
+  margin-right: 10px;
 }
 
 
@@ -108,5 +109,34 @@
   
   .copiesLeft{
     font-size: 1rem;
+  }
+
+  .buttonsContainer{
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .itemCountTitle{
+    font-size: 1.5rem;
+  }
+  
+  .add{
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .buy{
+    font-size: 1.3rem;
+  }
+
+  .copiesLeft{
+    font-size: 1.3rem;
+  }
+
+  .buttonsContainer{
+    font-size: 3rem;
   }
 }

@@ -13,7 +13,6 @@ function ItemDetail(data) {
       alert("Ya tienes este producto en el carrito");
       setIsInCartState(true);
     } else if (isInCart(data.title) == false) {
-      alert("Agregado al carrito con exito!");
       setIsInCartState(true);
       addItem(data, count);
     }
