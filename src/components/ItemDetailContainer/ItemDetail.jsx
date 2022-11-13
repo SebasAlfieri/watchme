@@ -24,7 +24,7 @@ function ItemDetail(data) {
   };
 
   return (
-    <div className="mainContainer">
+    <div className="mainDetailContainer">
       <div className="textContainer">
         <div className="title">
           <div className="titleH1">

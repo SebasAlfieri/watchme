@@ -42,7 +42,7 @@ function ItemTopContainer() {
   }
 
   return (
-    <div className="mainContainer">
+    <div className="mainTopContainer">
       <ItemTop
         id={data.id}
         title={data.Title}

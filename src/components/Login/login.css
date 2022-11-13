@@ -4,8 +4,9 @@
   color: white;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  margin-left: -80px;
   background-image: url(../../../public/loginbackground.jpg);
 }
 
@@ -105,6 +106,7 @@
 @media (min-width: 768px) {
   .loginContainer{
     width: 100%;
+    margin-left: 0;
   }
   
   .login{
