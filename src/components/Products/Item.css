@@ -1,8 +1,10 @@
 .cardContainer{
   background-color: #3d3737;
-  width: 270px;
-  height: 170px;
-  margin: 25px;
+  width: 90%;
+  margin-bottom: 25px;
+  min-width: 150px;
+  height: fit-content;
+  min-height: 200px;
   font-family: 'Bebas Neue', cursive;
   cursor: pointer;
   box-shadow: 3px 3px 3px black;
@@ -27,9 +29,10 @@
 }
 
 .cardTextContainer{
+  min-height: 200px;
   display: flex;
-  width: 270px;
-  height: 170px;
+  width: 100%;
+  height: 100%;
   flex-direction: column;
   opacity: 0;
 }
@@ -61,6 +64,7 @@
 
 .cardTextRating{
   display: flex;
+  font-size: 1.5rem;
   justify-content: center;
   align-items: center;
   width: 30%;
@@ -76,9 +80,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60%;
   width: 100%;
-  background-color: #181717;
+  height: 60%;
+  background: rgb(24,23,23);
+  background: linear-gradient(180deg, rgba(24,23,23,1) 27%, rgba(20,20,20,0) 100%);
 }
 
 .cardTextBottomBio{
@@ -86,5 +91,106 @@
   overflow: auto;
   overflow-y: hidden;
   width: 80%;
-  height: 80%;
+  height: 100%;
+  padding: 15px 0;
+}
+
+
+@media (min-width: 768px) {
+
+  .cardContainer{
+    background-color: #3d3737;
+    width: 270px;
+    height: 170px;
+    margin: 25px;
+    font-family: 'Bebas Neue', cursive;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-decoration: none;
+  }
+  
+  .cardImg{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .cardImg img{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .cardTextContainer{
+    display: flex;
+    width: 270px;
+    height: 170px;
+    flex-direction: column;
+    opacity: 0;
+  }
+  
+  .cardTextContainer:hover{
+    opacity: 0.9;
+  }
+  
+  .cardTextTop{
+    color: white;
+    display: flex;
+    height: 40%;
+    width: 100%;
+    background-color: #292929;
+    border-bottom: 2px solid #292929;
+    box-shadow: 0px 1px 1px rgb(223, 222, 222);
+    z-index: 10;
+  }
+  
+  .cardTextTitle{
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+    height: 100%;
+  }
+  
+  .cardTextRating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+  }
+  
+  .rating{
+    color: #E61e26;
+  }
+  
+  .cardTextBottom{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+    background-color: #181717;
+  }
+  
+  .cardTextBottomBio{
+    display: flex;
+    overflow: auto;
+    overflow-y: hidden;
+    width: 80%;
+    height: 80%;
+  }
+
+  
+
+  
+
 }

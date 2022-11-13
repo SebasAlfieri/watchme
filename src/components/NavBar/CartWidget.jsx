@@ -12,12 +12,10 @@ function CartWidget() {
   
   return (
     <Link to="/Cart" id="cartIcon">
-      <div>
+        <div className="cartNumberContainer">
+          <FaCartArrowDown /><span>{getTotalItemsInCart() > 0 && getTotalItemsInCart()}</span>
+        </div>
         <FaTrashAlt className="deleteButton" onClick={clear}/>
-      </div>
-      <div className="cartNumberContainer">
-        <FaCartArrowDown /><span>{getTotalItemsInCart() > 0 && getTotalItemsInCart()}</span>
-      </div>
     </Link>
   )
 }

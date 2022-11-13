@@ -42,15 +42,13 @@ function ItemTopContainer() {
   }
 
   return (
-    <div>
-      <div className="mainContainer">
-        <ItemTop
-          id={data.id}
-          title={data.Title}
-          img={data.Images}
-          bio={data.Plot}
-        />
-      </div>
+    <div className="mainContainer">
+      <ItemTop
+        id={data.id}
+        title={data.Title}
+        img={data.Images}
+        bio={data.Plot}
+      />
     </div>
   );
 }

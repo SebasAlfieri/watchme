@@ -12,8 +12,6 @@ import UserContextProvider from "./context/userContext"
 import CartContextProvider from "./context/cartContext"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-
-
 function App() {
   return (
     <CartContextProvider>
